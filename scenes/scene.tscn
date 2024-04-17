@@ -1,0 +1,101 @@
+[gd_scene load_steps=4 format=3 uid="uid://coicsfh2d2ao4"]
+
+[ext_resource type="Script" path="res://scripts/HandTracking.cs" id="1_evm8x"]
+[ext_resource type="Material" uid="uid://cp3ibrx7bbnws" path="res://materials/red.tres" id="2_werer"]
+[ext_resource type="SphereMesh" uid="uid://dlc2pjar02c5x" path="res://materials/HandBall.tres" id="3_81v5o"]
+
+[node name="Scene" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="Manager" type="Node" parent="."]
+script = ExtResource("1_evm8x")
+
+[node name="Hand" type="Node" parent="."]
+
+[node name="Points" type="Node3D" parent="Hand"]
+
+[node name="Point0" type="MeshInstance3D" parent="Hand/Points"]
+material_override = ExtResource("2_werer")
+mesh = ExtResource("3_81v5o")
+
+[node name="Point1" type="MeshInstance3D" parent="Hand/Points"]
+material_override = ExtResource("2_werer")
+mesh = ExtResource("3_81v5o")
+
+[node name="Point2" type="MeshInstance3D" parent="Hand/Points"]
+material_override = ExtResource("2_werer")
+mesh = ExtResource("3_81v5o")
+
+[node name="Point3" type="MeshInstance3D" parent="Hand/Points"]
+material_override = ExtResource("2_werer")
+mesh = ExtResource("3_81v5o")
+
+[node name="Point4" type="MeshInstance3D" parent="Hand/Points"]
+material_override = ExtResource("2_werer")
+mesh = ExtResource("3_81v5o")
+
+[node name="Point5" type="MeshInstance3D" parent="Hand/Points"]
+material_override = ExtResource("2_werer")
+mesh = ExtResource("3_81v5o")
+
+[node name="Point6" type="MeshInstance3D" parent="Hand/Points"]
+material_override = ExtResource("2_werer")
+mesh = ExtResource("3_81v5o")
+
+[node name="Point7" type="MeshInstance3D" parent="Hand/Points"]
+material_override = ExtResource("2_werer")
+mesh = ExtResource("3_81v5o")
+
+[node name="Point8" type="MeshInstance3D" parent="Hand/Points"]
+material_override = ExtResource("2_werer")
+mesh = ExtResource("3_81v5o")
+
+[node name="Point9" type="MeshInstance3D" parent="Hand/Points"]
+material_override = ExtResource("2_werer")
+mesh = ExtResource("3_81v5o")
+
+[node name="Point10" type="MeshInstance3D" parent="Hand/Points"]
+material_override = ExtResource("2_werer")
+mesh = ExtResource("3_81v5o")
+
+[node name="Point11" type="MeshInstance3D" parent="Hand/Points"]
+material_override = ExtResource("2_werer")
+mesh = ExtResource("3_81v5o")
+
+[node name="Point12" type="MeshInstance3D" parent="Hand/Points"]
+material_override = ExtResource("2_werer")
+mesh = ExtResource("3_81v5o")
+
+[node name="Point13" type="MeshInstance3D" parent="Hand/Points"]
+material_override = ExtResource("2_werer")
+mesh = ExtResource("3_81v5o")
+
+[node name="Point14" type="MeshInstance3D" parent="Hand/Points"]
+material_override = ExtResource("2_werer")
+mesh = ExtResource("3_81v5o")
+
+[node name="Point15" type="MeshInstance3D" parent="Hand/Points"]
+material_override = ExtResource("2_werer")
+mesh = ExtResource("3_81v5o")
+
+[node name="Point16" type="MeshInstance3D" parent="Hand/Points"]
+material_override = ExtResource("2_werer")
+mesh = ExtResource("3_81v5o")
+
+[node name="Point17" type="MeshInstance3D" parent="Hand/Points"]
+material_override = ExtResource("2_werer")
+mesh = ExtResource("3_81v5o")
+
+[node name="Point18" type="MeshInstance3D" parent="Hand/Points"]
+material_override = ExtResource("2_werer")
+mesh = ExtResource("3_81v5o")
+
+[node name="Point19" type="MeshInstance3D" parent="Hand/Points"]
+material_override = ExtResource("2_werer")
+mesh = ExtResource("3_81v5o")
+
+[node name="Point20" type="MeshInstance3D" parent="Hand/Points"]
+material_override = ExtResource("2_werer")
+mesh = ExtResource("3_81v5o")
