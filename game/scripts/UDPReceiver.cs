@@ -11,7 +11,6 @@ public class UDPReceiver {
 	public UdpClient client;
 	public int port = 5052;
 	public bool startReceiving = true;
-	public bool printToConsole = true;
 	public string data = "";
 
 	public void Start() {
@@ -31,10 +30,6 @@ public class UDPReceiver {
 				IPEndPoint anyIP = new IPEndPoint(IPAddress.Any, 0);
 				byte[] dataByte = client.Receive(ref anyIP);
 				data = Encoding.UTF8.GetString(dataByte);
-
-				if (printToConsole) {
-					GD.Print(data);
-				}
 			}
 			catch (Exception err) {
 				GD.Print(err.ToString());

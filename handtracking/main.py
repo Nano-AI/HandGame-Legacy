@@ -25,7 +25,7 @@ while True:
         for lm in lmList:
             data.extend([lm[0], HEIGHT - lm[1], lm[2]])
         sock.sendto(str.encode(str(data)), serverAddressPort)
-        print(data)
+        # print(data)
 
     cv2.imshow("Image", img)
     cv2.waitKey(1)
