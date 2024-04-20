@@ -1,0 +1,10 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1713295656
+icon.svg::CompressedTexture2D::2563279053424568007::1713283803::1713295037::1::::<><>::
+::res://materials/::1713295656
+::res://pythonProject/::1713294266
+::res://scenes/::1713295633
+scene.tscn::PackedScene::5772154053289163553::1713295633::0::1::::<><>::res://scripts/Receiver.cs
+::res://scripts/::1713291054
+Receiver.cs::CSharpScript::-1::1713291054::0::1::::<>Node<>::
+::res://texture/::1713295030

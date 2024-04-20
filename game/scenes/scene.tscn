@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://coicsfh2d2ao4"]
+[gd_scene load_steps=15 format=3 uid="uid://coicsfh2d2ao4"]
 
 [ext_resource type="Script" path="res://scripts/HandTracking.cs" id="1_4dnxk"]
 [ext_resource type="PackedScene" uid="uid://ccwv8xdeiev82" path="res://models/Hand/untitled.glb" id="1_bk3vv"]
 [ext_resource type="Material" uid="uid://cp3ibrx7bbnws" path="res://materials/red.tres" id="2_werer"]
-[ext_resource type="SphereMesh" uid="uid://dlc2pjar02c5x" path="res://materials/HandBall.tres" id="3_81v5o"]
 [ext_resource type="Shape3D" uid="uid://dprtbu7adajvl" path="res://materials/HandBallPhysics.tres" id="4_07s28"]
+[ext_resource type="CylinderMesh" uid="uid://djl7locmo4rgt" path="res://materials/cylidner.tres" id="5_hxljk"]
+[ext_resource type="CylinderMesh" uid="uid://btn3sv5b778h4" path="res://materials/cone.tres" id="6_cvuho"]
 [ext_resource type="Material" uid="uid://bbrderjwbc01s" path="res://materials/green.tres" id="6_t6060"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_q5u0k"]
@@ -299,6 +300,7 @@ lock_rotation = true
 freeze = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+visible = false
 mesh = SubResource("BoxMesh_q5u0k")
 skeleton = NodePath("")
 
@@ -306,7 +308,7 @@ skeleton = NodePath("")
 shape = SubResource("BoxShape3D_50h3v")
 
 [node name="RigidBody3D2" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11028, 0.678561, 0.0206408)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11028, 0.678561, -1.31693)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D2"]
 material_override = ExtResource("6_t6060")
@@ -317,7 +319,7 @@ skeleton = NodePath("")
 shape = SubResource("BoxShape3D_50h3v")
 
 [node name="RigidBody3D3" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11028, 1.98707, 0.0206408)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11028, 1.98707, -1.31693)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D3"]
 material_override = ExtResource("6_t6060")
@@ -328,7 +330,7 @@ skeleton = NodePath("")
 shape = SubResource("BoxShape3D_50h3v")
 
 [node name="RigidBody3D4" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11829, 3.38896, 0.0422487)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11829, 3.38896, -1.29533)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D4"]
 material_override = ExtResource("6_t6060")
@@ -350,8 +352,15 @@ mass = 10.0
 shape = ExtResource("4_07s28")
 
 [node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point0"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
-mesh = ExtResource("3_81v5o")
+mesh = ExtResource("5_hxljk")
+skeleton = NodePath("../..")
+
+[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point0/Mesh"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
+material_override = ExtResource("2_werer")
+mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
 [node name="Point1" type="RigidBody3D" parent="Hand/Points"]
@@ -361,8 +370,15 @@ mass = 10.0
 shape = ExtResource("4_07s28")
 
 [node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point1"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
-mesh = ExtResource("3_81v5o")
+mesh = ExtResource("5_hxljk")
+skeleton = NodePath("../..")
+
+[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point1/Mesh"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
+material_override = ExtResource("2_werer")
+mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
 [node name="Point2" type="RigidBody3D" parent="Hand/Points"]
@@ -372,8 +388,15 @@ mass = 10.0
 shape = ExtResource("4_07s28")
 
 [node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point2"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
-mesh = ExtResource("3_81v5o")
+mesh = ExtResource("5_hxljk")
+skeleton = NodePath("../..")
+
+[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point2/Mesh"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
+material_override = ExtResource("2_werer")
+mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
 [node name="Point3" type="RigidBody3D" parent="Hand/Points"]
@@ -383,8 +406,15 @@ mass = 10.0
 shape = ExtResource("4_07s28")
 
 [node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point3"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
-mesh = ExtResource("3_81v5o")
+mesh = ExtResource("5_hxljk")
+skeleton = NodePath("../..")
+
+[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point3/Mesh"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
+material_override = ExtResource("2_werer")
+mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
 [node name="Point4" type="RigidBody3D" parent="Hand/Points"]
@@ -394,8 +424,15 @@ mass = 10.0
 shape = ExtResource("4_07s28")
 
 [node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point4"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
-mesh = ExtResource("3_81v5o")
+mesh = ExtResource("5_hxljk")
+skeleton = NodePath("../..")
+
+[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point4/Mesh"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
+material_override = ExtResource("2_werer")
+mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
 [node name="Point5" type="RigidBody3D" parent="Hand/Points"]
@@ -405,8 +442,15 @@ mass = 10.0
 shape = ExtResource("4_07s28")
 
 [node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point5"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
-mesh = ExtResource("3_81v5o")
+mesh = ExtResource("5_hxljk")
+skeleton = NodePath("../..")
+
+[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point5/Mesh"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
+material_override = ExtResource("2_werer")
+mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
 [node name="Point6" type="RigidBody3D" parent="Hand/Points"]
@@ -416,8 +460,15 @@ mass = 10.0
 shape = ExtResource("4_07s28")
 
 [node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point6"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
-mesh = ExtResource("3_81v5o")
+mesh = ExtResource("5_hxljk")
+skeleton = NodePath("../..")
+
+[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point6/Mesh"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
+material_override = ExtResource("2_werer")
+mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
 [node name="Point7" type="RigidBody3D" parent="Hand/Points"]
@@ -427,8 +478,15 @@ mass = 10.0
 shape = ExtResource("4_07s28")
 
 [node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point7"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
-mesh = ExtResource("3_81v5o")
+mesh = ExtResource("5_hxljk")
+skeleton = NodePath("../..")
+
+[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point7/Mesh"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
+material_override = ExtResource("2_werer")
+mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
 [node name="Point8" type="RigidBody3D" parent="Hand/Points"]
@@ -438,8 +496,15 @@ mass = 10.0
 shape = ExtResource("4_07s28")
 
 [node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point8"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
-mesh = ExtResource("3_81v5o")
+mesh = ExtResource("5_hxljk")
+skeleton = NodePath("../..")
+
+[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point8/Mesh"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
+material_override = ExtResource("2_werer")
+mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
 [node name="Point9" type="RigidBody3D" parent="Hand/Points"]
@@ -449,8 +514,15 @@ mass = 10.0
 shape = ExtResource("4_07s28")
 
 [node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point9"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
-mesh = ExtResource("3_81v5o")
+mesh = ExtResource("5_hxljk")
+skeleton = NodePath("../..")
+
+[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point9/Mesh"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
+material_override = ExtResource("2_werer")
+mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
 [node name="Point10" type="RigidBody3D" parent="Hand/Points"]
@@ -460,8 +532,15 @@ mass = 10.0
 shape = ExtResource("4_07s28")
 
 [node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point10"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
-mesh = ExtResource("3_81v5o")
+mesh = ExtResource("5_hxljk")
+skeleton = NodePath("../..")
+
+[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point10/Mesh"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
+material_override = ExtResource("2_werer")
+mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
 [node name="Point11" type="RigidBody3D" parent="Hand/Points"]
@@ -471,8 +550,15 @@ mass = 10.0
 shape = ExtResource("4_07s28")
 
 [node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point11"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
-mesh = ExtResource("3_81v5o")
+mesh = ExtResource("5_hxljk")
+skeleton = NodePath("../..")
+
+[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point11/Mesh"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
+material_override = ExtResource("2_werer")
+mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
 [node name="Point12" type="RigidBody3D" parent="Hand/Points"]
@@ -482,8 +568,15 @@ mass = 10.0
 shape = ExtResource("4_07s28")
 
 [node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point12"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
-mesh = ExtResource("3_81v5o")
+mesh = ExtResource("5_hxljk")
+skeleton = NodePath("../..")
+
+[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point12/Mesh"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
+material_override = ExtResource("2_werer")
+mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
 [node name="Point13" type="RigidBody3D" parent="Hand/Points"]
@@ -493,8 +586,15 @@ mass = 10.0
 shape = ExtResource("4_07s28")
 
 [node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point13"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
-mesh = ExtResource("3_81v5o")
+mesh = ExtResource("5_hxljk")
+skeleton = NodePath("../..")
+
+[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point13/Mesh"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
+material_override = ExtResource("2_werer")
+mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
 [node name="Point14" type="RigidBody3D" parent="Hand/Points"]
@@ -504,8 +604,15 @@ mass = 10.0
 shape = ExtResource("4_07s28")
 
 [node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point14"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
-mesh = ExtResource("3_81v5o")
+mesh = ExtResource("5_hxljk")
+skeleton = NodePath("../..")
+
+[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point14/Mesh"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
+material_override = ExtResource("2_werer")
+mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
 [node name="Point15" type="RigidBody3D" parent="Hand/Points"]
@@ -515,8 +622,15 @@ mass = 10.0
 shape = ExtResource("4_07s28")
 
 [node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point15"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
-mesh = ExtResource("3_81v5o")
+mesh = ExtResource("5_hxljk")
+skeleton = NodePath("../..")
+
+[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point15/Mesh"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
+material_override = ExtResource("2_werer")
+mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
 [node name="Point16" type="RigidBody3D" parent="Hand/Points"]
@@ -526,8 +640,15 @@ mass = 10.0
 shape = ExtResource("4_07s28")
 
 [node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point16"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
-mesh = ExtResource("3_81v5o")
+mesh = ExtResource("5_hxljk")
+skeleton = NodePath("../..")
+
+[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point16/Mesh"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
+material_override = ExtResource("2_werer")
+mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
 [node name="Point17" type="RigidBody3D" parent="Hand/Points"]
@@ -537,8 +658,15 @@ mass = 10.0
 shape = ExtResource("4_07s28")
 
 [node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point17"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
-mesh = ExtResource("3_81v5o")
+mesh = ExtResource("5_hxljk")
+skeleton = NodePath("../..")
+
+[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point17/Mesh"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
+material_override = ExtResource("2_werer")
+mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
 [node name="Point18" type="RigidBody3D" parent="Hand/Points"]
@@ -548,8 +676,15 @@ mass = 10.0
 shape = ExtResource("4_07s28")
 
 [node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point18"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
-mesh = ExtResource("3_81v5o")
+mesh = ExtResource("5_hxljk")
+skeleton = NodePath("../..")
+
+[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point18/Mesh"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
+material_override = ExtResource("2_werer")
+mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
 [node name="Point19" type="RigidBody3D" parent="Hand/Points"]
@@ -559,8 +694,15 @@ mass = 10.0
 shape = ExtResource("4_07s28")
 
 [node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point19"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
-mesh = ExtResource("3_81v5o")
+mesh = ExtResource("5_hxljk")
+skeleton = NodePath("../..")
+
+[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point19/Mesh"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
+material_override = ExtResource("2_werer")
+mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
 [node name="Point20" type="RigidBody3D" parent="Hand/Points"]
@@ -570,14 +712,21 @@ mass = 10.0
 shape = ExtResource("4_07s28")
 
 [node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point20"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
-mesh = ExtResource("3_81v5o")
+mesh = ExtResource("5_hxljk")
+skeleton = NodePath("../..")
+
+[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point20/Mesh"]
+transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
+material_override = ExtResource("2_werer")
+mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
 [node name="untitled" parent="." instance=ExtResource("1_bk3vv")]
 
 [node name="RiggedHand" type="Node3D" parent="."]
-transform = Transform3D(-9.99831, 0, 0.183597, 0, 10, 0, -0.183597, 0, -9.99831, 0.160353, 4.2009, 3.60239)
+transform = Transform3D(-9.99999, 0, -8.74227e-07, 0, 10, 0, 8.74227e-07, 0, -9.99999, 0.160353, 1.5758, 2.17272)
 
 [node name="5b9ddf1fd1784ca89a9cbe027eb87d41_fbx" type="Node3D" parent="RiggedHand"]
 transform = Transform3D(1, 0, 0, 0, -3.57628e-07, -1, 0, 1, -3.57628e-07, 0, 0, 0)

@@ -8,7 +8,7 @@ public partial class HandTracking : Node {
 
 	public Array<Node3D> handPoints;
 	public Array<Vector3> handPositions;
-    
+	
 	public Vector3 offset = new Vector3(0, 0, 0);
 
 	private Button calibrateButton;
@@ -36,7 +36,7 @@ public partial class HandTracking : Node {
 		calibrateButton.Text = "Calibrate";
 		calibrateButton.Pressed += Calibrate;
 
-		skel = (Skeleton3D) GetNode("../RiggedHand/Armature/Skeleton3D");
+		skel = GetNode<Skeleton3D>("../RiggedHand/Armature/Skeleton3D");
 		//		skel.FindBone("")
 
 		AddChild(calibrateButton);
@@ -68,17 +68,46 @@ public partial class HandTracking : Node {
 				handPositions[i] = new Vector3(-1 * x, y, z);
 			}
 
-			int id = skel.FindBone(i.ToString());
-			skel.SetBonePosePosition(id, handPositions[i] - offset);
-			if (id != 0 && id != 5 && id != 9 && id != 13 && id != 17) {
-				skel.SetBonePoseRotation(id, new Quaternion(
-					));		
-			}
-			// skel.SetBonePoseRotation(id, );
-			
 			// point.Position = handPositions[i] - offset - zOffset;
 			point.Position = handPositions[i] - offset;
+			
+			UpdateHand();
 		}
+	}
+
+	public void UpdateHand() {
+		GD.Print(skel.GetBoneCount(), handPositions.Count);
+		for (int i = 0; i < handPositions.Count; i++) {
+			if (i % 4 == 0) continue;
+			Vector3 at = handPoints[i].Position;
+			Vector3 next = handPoints[i + 1].Position;
+			Quaternion q;
+			Vector3 a = at.Cross(next);
+			q.X = a.X;
+			q.Y = a.Y;
+			q.Z = a.Z;
+			q.W = (float) Math.Sqrt(
+				Math.Pow(at.Length(), 2) * Math.Pow(at.Length(), 2) + at.Dot(next)
+				);
+
+			Vector3 direction = at - next;
+			Quaternion rotation = Quaternion.Identity;
+			rotation.X = Mathf.Atan2(-direction.Z, direction.Y);
+			rotation.Y = Mathf.Atan2(direction.X, Mathf.Sqrt(direction.Y * direction.Y + direction.Z * direction.Z));
+			rotation.Z = 0;
+
+			Basis basis = new Basis(q);
+			handPoints[i].Transform = new Transform3D(basis, handPoints[i].Transform.Origin);
+
+			// skel.SetBonePosePosition(bone, handPoints[i].GlobalPosition);
+		}
+	}
+
+	private Quaternion CalculateRotation(Vector3 fromDirection, Vector3 toDirection)
+	{
+		Vector3 axis = fromDirection.Cross(toDirection).Normalized();
+		float angle = Mathf.Acos(fromDirection.Dot(toDirection));
+		return new Quaternion(axis, angle);
 	}
 
 	public void Calibrate() {
