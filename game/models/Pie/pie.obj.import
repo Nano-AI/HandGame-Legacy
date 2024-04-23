@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bee1vj6ouoe07"
+path="res://.godot/imported/pie.obj-460b1bac34fc6d8c50eb0ebcbdb89c8f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pie.obj-460b1bac34fc6d8c50eb0ebcbdb89c8f.mesh"]
+
+source_file="res://models/Pie/pie.obj"
+dest_files=["res://.godot/imported/pie.obj-460b1bac34fc6d8c50eb0ebcbdb89c8f.mesh", "res://.godot/imported/pie.obj-460b1bac34fc6d8c50eb0ebcbdb89c8f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

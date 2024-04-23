@@ -1,0 +1,160 @@
+[gd_scene load_steps=15 format=3 uid="uid://bfay3yymwf4r7"]
+
+[ext_resource type="PackedScene" uid="uid://cebq72uaowu82" path="res://prefabs/point_0.tscn" id="1_agcj0"]
+[ext_resource type="PackedScene" uid="uid://bv6twrgslean0" path="res://prefabs/manager.tscn" id="2_hatcw"]
+[ext_resource type="ArrayMesh" uid="uid://d0j2f4y5r5gcs" path="res://models/Fridge/kitchenFridgeLarge.obj" id="3_vd2vd"]
+[ext_resource type="ArrayMesh" uid="uid://uw4vayivwjvp" path="res://models/Stove/kitchenStove.obj" id="4_telue"]
+[ext_resource type="ArrayMesh" uid="uid://dxaosqi7sgvqy" path="res://models/Kitchen Cabinet Drawer/kitchenCabinetDrawer.obj" id="5_5v6n5"]
+[ext_resource type="ArrayMesh" uid="uid://m284xefa1cq" path="res://models/Knife Block/knifeBlock.obj" id="6_7o601"]
+[ext_resource type="ArrayMesh" uid="uid://chg301f0ago42" path="res://models/Cutting Board/cuttingBoard.obj" id="7_s2xpg"]
+[ext_resource type="ArrayMesh" uid="uid://db3i0el0hw1yk" path="res://models/Cooking Knife/cookingKnife.obj" id="8_y272c"]
+[ext_resource type="ArrayMesh" uid="uid://br1lgfnmps4io" path="res://models/Frying Pan/fryingPan.obj" id="9_3tnaf"]
+[ext_resource type="ArrayMesh" uid="uid://cln4bk4miqw4d" path="res://models/Kitchen Coffee Machine/kitchenCoffeeMachine.obj" id="10_gfyvc"]
+[ext_resource type="ArrayMesh" uid="uid://b5aehblvetepl" path="res://models/Kitchen Sink/kitchenSink.obj" id="11_8ik3p"]
+[ext_resource type="ArrayMesh" uid="uid://3wkflnc6c0k2" path="res://models/Cup/cup.obj" id="12_dlg05"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_drr8t"]
+size = Vector2(20, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8a5um"]
+size = Vector3(20, 0.001, 20)
+
+[node name="Cooking" type="Node3D"]
+
+[node name="Hand" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13352, 6.57498)
+
+[node name="Points" type="Node3D" parent="Hand"]
+
+[node name="Point0" parent="Hand/Points" instance=ExtResource("1_agcj0")]
+
+[node name="Point1" parent="Hand/Points" instance=ExtResource("1_agcj0")]
+
+[node name="Point2" parent="Hand/Points" instance=ExtResource("1_agcj0")]
+
+[node name="Point3" parent="Hand/Points" instance=ExtResource("1_agcj0")]
+
+[node name="Point4" parent="Hand/Points" instance=ExtResource("1_agcj0")]
+
+[node name="Point5" parent="Hand/Points" instance=ExtResource("1_agcj0")]
+
+[node name="Point6" parent="Hand/Points" instance=ExtResource("1_agcj0")]
+
+[node name="Point7" parent="Hand/Points" instance=ExtResource("1_agcj0")]
+
+[node name="Point8" parent="Hand/Points" instance=ExtResource("1_agcj0")]
+
+[node name="Point9" parent="Hand/Points" instance=ExtResource("1_agcj0")]
+
+[node name="Point10" parent="Hand/Points" instance=ExtResource("1_agcj0")]
+
+[node name="Point11" parent="Hand/Points" instance=ExtResource("1_agcj0")]
+
+[node name="Point12" parent="Hand/Points" instance=ExtResource("1_agcj0")]
+
+[node name="Point13" parent="Hand/Points" instance=ExtResource("1_agcj0")]
+
+[node name="Point14" parent="Hand/Points" instance=ExtResource("1_agcj0")]
+
+[node name="Point15" parent="Hand/Points" instance=ExtResource("1_agcj0")]
+
+[node name="Point16" parent="Hand/Points" instance=ExtResource("1_agcj0")]
+
+[node name="Point17" parent="Hand/Points" instance=ExtResource("1_agcj0")]
+
+[node name="Point18" parent="Hand/Points" instance=ExtResource("1_agcj0")]
+
+[node name="Point19" parent="Hand/Points" instance=ExtResource("1_agcj0")]
+
+[node name="Point20" parent="Hand/Points" instance=ExtResource("1_agcj0")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.915628, 0.402028, 0, -0.402028, 0.915628, -0.209949, 4.4872, 0.701717)
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
+mesh = SubResource("PlaneMesh_drr8t")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Node3D"]
+mass = 100.0
+gravity_scale = 0.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/RigidBody3D"]
+shape = SubResource("BoxShape3D_8a5um")
+
+[node name="Manager" parent="." instance=ExtResource("2_hatcw")]
+
+[node name="Fridge" type="Node3D" parent="."]
+transform = Transform3D(-4, 0, -6.03983e-07, 0, 4, 0, 6.03983e-07, 0, -4, -5.07976, 0, -4.15581)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Fridge"]
+mesh = ExtResource("3_vd2vd")
+skeleton = NodePath("../..")
+
+[node name="Stove" type="Node3D" parent="."]
+transform = Transform3D(-4, 0, -3.49691e-07, 0, 4, 0, 3.49691e-07, 0, -4, -3, 0, -4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Stove"]
+mesh = ExtResource("4_telue")
+
+[node name="FryingPan" type="MeshInstance3D" parent="Stove"]
+transform = Transform3D(0.234923, 0, 0.085505, 0, 0.25, 0, -0.085505, 0, 0.234923, -0.297247, 0.441842, 0.184456)
+mesh = ExtResource("9_3tnaf")
+skeleton = NodePath("../..")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 1.41104e-08, 4.81758e-09, -1.49101e-08, 0.946362, 0.323108, 0, -0.323108, 0.946362, 0, 2.97191, -14.2416)
+shadow_enabled = true
+
+[node name="Cutting" type="Node3D" parent="."]
+
+[node name="KitchenCabinetDrawer" type="MeshInstance3D" parent="Cutting"]
+transform = Transform3D(-4, 0, -3.49691e-07, 0, 4, 0, 3.49691e-07, 0, -4, -1.28636, 0, -4)
+mesh = ExtResource("5_5v6n5")
+skeleton = NodePath("../..")
+
+[node name="KnifeBlock" type="MeshInstance3D" parent="Cutting"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.079519, 1.68401, -5.21449)
+mesh = ExtResource("6_7o601")
+skeleton = NodePath("../..")
+
+[node name="CuttingBoard" type="MeshInstance3D" parent="Cutting"]
+transform = Transform3D(-5.46392e-08, 0, 1.25, 0, 1.25, 0, -1.25, 0, -5.46392e-08, -0.525024, 1.69141, -4.63773)
+mesh = ExtResource("7_s2xpg")
+skeleton = NodePath("../..")
+
+[node name="CookingKnife" type="MeshInstance3D" parent="Cutting"]
+transform = Transform3D(-0.21706, 6.41272e-08, -1.23101, 1.23101, -5.38091e-08, -0.21706, -6.41272e-08, -1.25, -5.38091e-08, -0.606851, 2.07666, -4.69596)
+mesh = ExtResource("8_y272c")
+skeleton = NodePath("../..")
+
+[node name="Coffee" type="Node3D" parent="."]
+
+[node name="KitchenCoffeeMachine" type="MeshInstance3D" parent="Coffee"]
+transform = Transform3D(-3, 0, -2.62268e-07, 0, 3, 0, 2.62268e-07, 0, -3, 0.969915, 1.67831, -4.49247)
+mesh = ExtResource("10_gfyvc")
+skeleton = NodePath("../..")
+
+[node name="Cup" type="MeshInstance3D" parent="Coffee"]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 1.54748, 1.67546, -4.29335)
+mesh = ExtResource("12_dlg05")
+skeleton = NodePath("../..")
+
+[node name="KitchenCabinetDrawer2" type="MeshInstance3D" parent="Coffee"]
+transform = Transform3D(-4, 0, -3.49691e-07, 0, 4, 0, 3.49691e-07, 0, -4, 0.426208, 0, -4)
+mesh = ExtResource("5_5v6n5")
+skeleton = NodePath("../..")
+
+[node name="Sink" type="Node3D" parent="."]
+
+[node name="KitchenSink" type="MeshInstance3D" parent="Sink"]
+transform = Transform3D(-4, 0, -3.49691e-07, 0, 4, 0, 3.49691e-07, 0, -4, 2.139, 0, -4)
+mesh = ExtResource("11_8ik3p")
+skeleton = NodePath("../..")
+
+[node name="HoveringText" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.623568, 0)
+
+[node name="Label3D" type="Label3D" parent="HoveringText"]
+text = "0"

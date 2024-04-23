@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://becsqj7gtamwj"
+path="res://.godot/imported/wineRed.obj-7d4cc0e4a2f357b5e864bd9938a22860.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wineRed.obj-7d4cc0e4a2f357b5e864bd9938a22860.mesh"]
+
+source_file="res://models/Wine Red/wineRed.obj"
+dest_files=["res://.godot/imported/wineRed.obj-7d4cc0e4a2f357b5e864bd9938a22860.mesh", "res://.godot/imported/wineRed.obj-7d4cc0e4a2f357b5e864bd9938a22860.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

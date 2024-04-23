@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://m284xefa1cq"
+path="res://.godot/imported/knifeBlock.obj-4aac8641f2a9ec7e50605842e085880b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/knifeBlock.obj-4aac8641f2a9ec7e50605842e085880b.mesh"]
+
+source_file="res://models/Knife Block/knifeBlock.obj"
+dest_files=["res://.godot/imported/knifeBlock.obj-4aac8641f2a9ec7e50605842e085880b.mesh", "res://.godot/imported/knifeBlock.obj-4aac8641f2a9ec7e50605842e085880b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cvq81nmhfu7gq"
+path="res://.godot/imported/burgerCheese.obj-1ccab9b7d27c38cc6e7cfee95b5f415b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/burgerCheese.obj-1ccab9b7d27c38cc6e7cfee95b5f415b.mesh"]
+
+source_file="res://models/Burger Cheese/burgerCheese.obj"
+dest_files=["res://.godot/imported/burgerCheese.obj-1ccab9b7d27c38cc6e7cfee95b5f415b.mesh", "res://.godot/imported/burgerCheese.obj-1ccab9b7d27c38cc6e7cfee95b5f415b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

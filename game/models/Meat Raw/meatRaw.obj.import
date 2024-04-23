@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cocyvruu5gve2"
+path="res://.godot/imported/meatRaw.obj-31b7b0291fac9ceb5531bd3b29aa7d25.mesh"
+
+[deps]
+
+files=["res://.godot/imported/meatRaw.obj-31b7b0291fac9ceb5531bd3b29aa7d25.mesh"]
+
+source_file="res://models/Meat Raw/meatRaw.obj"
+dest_files=["res://.godot/imported/meatRaw.obj-31b7b0291fac9ceb5531bd3b29aa7d25.mesh", "res://.godot/imported/meatRaw.obj-31b7b0291fac9ceb5531bd3b29aa7d25.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

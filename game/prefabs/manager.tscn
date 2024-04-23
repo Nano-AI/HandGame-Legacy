@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bv6twrgslean0"]
+
+[ext_resource type="Script" path="res://scripts/HandTracking.cs" id="1_csomt"]
+
+[node name="Manager" type="Node"]
+script = ExtResource("1_csomt")

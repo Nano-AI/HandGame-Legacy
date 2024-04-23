@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://64xyyasgwpm8"
+path="res://.godot/imported/utensilKnife.obj-a105433448c0a8ffd6e9554b24df5e86.mesh"
+
+[deps]
+
+files=["res://.godot/imported/utensilKnife.obj-a105433448c0a8ffd6e9554b24df5e86.mesh"]
+
+source_file="res://models/Utensil Knife/utensilKnife.obj"
+dest_files=["res://.godot/imported/utensilKnife.obj-a105433448c0a8ffd6e9554b24df5e86.mesh", "res://.godot/imported/utensilKnife.obj-a105433448c0a8ffd6e9554b24df5e86.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

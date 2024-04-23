@@ -1,3 +1,0 @@
-SphereMesh
-StandardMaterial3D
-CSharpScript

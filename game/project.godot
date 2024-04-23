@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="HandTracking"
-run/main_scene="res://scenes/scene.tscn"
+run/main_scene="res://scenes/Cooking.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -22,3 +22,7 @@ project/assembly_name="HandTracking"
 [filesystem]
 
 import/fbx/enabled=false
+
+[physics]
+
+3d/physics_engine="JoltPhysics3D"

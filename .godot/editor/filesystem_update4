@@ -1,7 +1,0 @@
-res://scenes/scene.tscn
-res://scripts/Receiver.cs
-res://materials/red.tres
-res://materials/green.tres
-res://scripts/UDPReceiver.cs
-res://scripts/HandTracking.cs
-res://materials/HandBall.tres

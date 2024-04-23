@@ -1,0 +1,9 @@
+[gd_resource type="TextMesh" load_steps=2 format=3 uid="uid://dwchyd1j84ipm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1vmsb"]
+billboard_mode = 1
+
+[resource]
+material = SubResource("StandardMaterial3D_1vmsb")
+text = "0"
+depth = 0.0

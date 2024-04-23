@@ -23,6 +23,12 @@ public partial class HandTracking : Node {
 	private MeshInstance3D meshInstance3D;
 	private ArrayMesh mesh;
 
+	[Export]
+	public int handScale = 100;
+
+	[Export]
+	public int zoomScale = 20;
+
 	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready() {
@@ -62,15 +68,15 @@ public partial class HandTracking : Node {
 		// GD.Print(data);
 		string[] points = data.Split(',');
 		for (int i = 0; i < 21; i++) {
-			float x = float.Parse(points[i * 3]) / 70;
-			float y = float.Parse(points[i * 3 + 1]) / 70;
-			float z = float.Parse(points[i * 3 + 2]) / 70;
+			float x = float.Parse(points[i * 3]) / handScale;
+			float y = float.Parse(points[i * 3 + 1]) / handScale;
+			float z = float.Parse(points[i * 3 + 2]) / handScale;
 			Vector3 newPoint = new Vector3(-1 * x, y, z);	
 			
 			Node3D point = (Node3D) handPoints[i];
 
-			float distance = handPositions[9].DistanceTo(handPositions[0]);
-			Vector3 zOffset = new Vector3(0, 0, (distance / calibratedScale) * 10);
+			float distance = handPositions[1].DistanceTo(handPositions[0]);
+			Vector3 zOffset = new Vector3(0, 0, (distance / calibratedScale) * zoomScale);
 			
 			if (newPoint.DistanceTo(handPositions[i]) > minDistanceAway) {
 				handPositions[i] = new Vector3(-1 * x, y, z);
