@@ -1,8 +1,8 @@
 [gd_scene load_steps=15 format=3 uid="uid://coicsfh2d2ao4"]
 
 [ext_resource type="Script" path="res://scripts/HandTracking.cs" id="1_4dnxk"]
-[ext_resource type="PackedScene" uid="uid://ccwv8xdeiev82" path="res://models/Hand/untitled.glb" id="1_bk3vv"]
 [ext_resource type="Material" uid="uid://cp3ibrx7bbnws" path="res://materials/red.tres" id="2_werer"]
+[ext_resource type="PackedScene" uid="uid://cebq72uaowu82" path="res://materials/point_0.tscn" id="3_l5j6p"]
 [ext_resource type="Shape3D" uid="uid://dprtbu7adajvl" path="res://materials/HandBallPhysics.tres" id="4_07s28"]
 [ext_resource type="CylinderMesh" uid="uid://djl7locmo4rgt" path="res://materials/cylidner.tres" id="5_hxljk"]
 [ext_resource type="CylinderMesh" uid="uid://btn3sv5b778h4" path="res://materials/cone.tres" id="6_cvuho"]
@@ -300,7 +300,6 @@ lock_rotation = true
 freeze = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
-visible = false
 mesh = SubResource("BoxMesh_q5u0k")
 skeleton = NodePath("")
 
@@ -340,393 +339,540 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D4"]
 shape = SubResource("BoxShape3D_50h3v")
 
+[node name="RigidBody3D5" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.96885, 0.678561, -1.31693)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D5"]
+material_override = ExtResource("6_t6060")
+mesh = SubResource("BoxMesh_q5u0k")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D5"]
+shape = SubResource("BoxShape3D_50h3v")
+
+[node name="RigidBody3D6" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.96885, 1.98707, -1.31693)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D6"]
+material_override = ExtResource("6_t6060")
+mesh = SubResource("BoxMesh_q5u0k")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D6"]
+shape = SubResource("BoxShape3D_50h3v")
+
+[node name="RigidBody3D7" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.96084, 3.38896, -1.29533)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D7"]
+material_override = ExtResource("6_t6060")
+mesh = SubResource("BoxMesh_q5u0k")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.46982, 0, -4.64936)
+shape = SubResource("BoxShape3D_50h3v")
+
+[node name="RigidBody3D8" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.670023, 0.678561, -5.96629)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D8"]
+material_override = ExtResource("6_t6060")
+mesh = SubResource("BoxMesh_q5u0k")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D8"]
+shape = SubResource("BoxShape3D_50h3v")
+
+[node name="RigidBody3D9" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.670023, 1.98707, -5.96629)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D9"]
+material_override = ExtResource("6_t6060")
+mesh = SubResource("BoxMesh_q5u0k")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D9"]
+shape = SubResource("BoxShape3D_50h3v")
+
+[node name="RigidBody3D10" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.662013, 3.38896, -5.94469)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D10"]
+material_override = ExtResource("6_t6060")
+mesh = SubResource("BoxMesh_q5u0k")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D10"]
+shape = SubResource("BoxShape3D_50h3v")
+
+[node name="RigidBody3D11" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.27331, 0.678561, -4.01142)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D11"]
+material_override = ExtResource("6_t6060")
+mesh = SubResource("BoxMesh_q5u0k")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D11"]
+shape = SubResource("BoxShape3D_50h3v")
+
+[node name="RigidBody3D12" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.27331, 1.98707, -4.01142)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D12"]
+material_override = ExtResource("6_t6060")
+mesh = SubResource("BoxMesh_q5u0k")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D12"]
+shape = SubResource("BoxShape3D_50h3v")
+
+[node name="RigidBody3D13" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2653, 3.38896, -3.98982)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D13"]
+material_override = ExtResource("6_t6060")
+mesh = SubResource("BoxMesh_q5u0k")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D13"]
+shape = SubResource("BoxShape3D_50h3v")
+
 [node name="Hand" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13352, -0.216152)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13352, 5.21472)
 
 [node name="Points" type="Node3D" parent="Hand"]
 
-[node name="Point0" type="RigidBody3D" parent="Hand/Points"]
+[node name="Point0" parent="Hand/Points" instance=ExtResource("3_l5j6p")]
+
+[node name="Point1" parent="Hand/Points" instance=ExtResource("3_l5j6p")]
+
+[node name="Point2" parent="Hand/Points" instance=ExtResource("3_l5j6p")]
+
+[node name="Point3" parent="Hand/Points" instance=ExtResource("3_l5j6p")]
+
+[node name="Point4" parent="Hand/Points" instance=ExtResource("3_l5j6p")]
+
+[node name="Point5" parent="Hand/Points" instance=ExtResource("3_l5j6p")]
+
+[node name="Point6" parent="Hand/Points" instance=ExtResource("3_l5j6p")]
+
+[node name="Point7" parent="Hand/Points" instance=ExtResource("3_l5j6p")]
+
+[node name="Point8" parent="Hand/Points" instance=ExtResource("3_l5j6p")]
+
+[node name="Point9" parent="Hand/Points" instance=ExtResource("3_l5j6p")]
+
+[node name="Point10" parent="Hand/Points" instance=ExtResource("3_l5j6p")]
+
+[node name="Point11" parent="Hand/Points" instance=ExtResource("3_l5j6p")]
+
+[node name="Point12" parent="Hand/Points" instance=ExtResource("3_l5j6p")]
+
+[node name="Point13" parent="Hand/Points" instance=ExtResource("3_l5j6p")]
+
+[node name="Point14" parent="Hand/Points" instance=ExtResource("3_l5j6p")]
+
+[node name="Point15" parent="Hand/Points" instance=ExtResource("3_l5j6p")]
+
+[node name="Point16" parent="Hand/Points" instance=ExtResource("3_l5j6p")]
+
+[node name="Point17" parent="Hand/Points" instance=ExtResource("3_l5j6p")]
+
+[node name="Point18" parent="Hand/Points" instance=ExtResource("3_l5j6p")]
+
+[node name="Point19" parent="Hand/Points" instance=ExtResource("3_l5j6p")]
+
+[node name="Point20" parent="Hand/Points" instance=ExtResource("3_l5j6p")]
+
+[node name="Hand2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13352, -0.216152)
+visible = false
+
+[node name="Points" type="Node3D" parent="Hand2"]
+
+[node name="Point0" type="RigidBody3D" parent="Hand2/Points"]
 mass = 10.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand/Points/Point0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand2/Points/Point0"]
 shape = ExtResource("4_07s28")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point0"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point0"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("5_hxljk")
 skeleton = NodePath("../..")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point0/Mesh"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point0/Mesh"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
-[node name="Point1" type="RigidBody3D" parent="Hand/Points"]
+[node name="Point1" type="RigidBody3D" parent="Hand2/Points"]
 mass = 10.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand/Points/Point1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand2/Points/Point1"]
 shape = ExtResource("4_07s28")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point1"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point1"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("5_hxljk")
 skeleton = NodePath("../..")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point1/Mesh"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point1/Mesh"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
-[node name="Point2" type="RigidBody3D" parent="Hand/Points"]
+[node name="Point2" type="RigidBody3D" parent="Hand2/Points"]
 mass = 10.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand/Points/Point2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand2/Points/Point2"]
 shape = ExtResource("4_07s28")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point2"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point2"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("5_hxljk")
 skeleton = NodePath("../..")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point2/Mesh"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point2/Mesh"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
-[node name="Point3" type="RigidBody3D" parent="Hand/Points"]
+[node name="Point3" type="RigidBody3D" parent="Hand2/Points"]
 mass = 10.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand/Points/Point3"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand2/Points/Point3"]
 shape = ExtResource("4_07s28")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point3"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point3"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("5_hxljk")
 skeleton = NodePath("../..")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point3/Mesh"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point3/Mesh"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
-[node name="Point4" type="RigidBody3D" parent="Hand/Points"]
+[node name="Point4" type="RigidBody3D" parent="Hand2/Points"]
 mass = 10.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand/Points/Point4"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand2/Points/Point4"]
 shape = ExtResource("4_07s28")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point4"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point4"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("5_hxljk")
 skeleton = NodePath("../..")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point4/Mesh"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point4/Mesh"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
-[node name="Point5" type="RigidBody3D" parent="Hand/Points"]
+[node name="Point5" type="RigidBody3D" parent="Hand2/Points"]
 mass = 10.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand/Points/Point5"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand2/Points/Point5"]
 shape = ExtResource("4_07s28")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point5"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point5"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("5_hxljk")
 skeleton = NodePath("../..")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point5/Mesh"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point5/Mesh"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
-[node name="Point6" type="RigidBody3D" parent="Hand/Points"]
+[node name="Point6" type="RigidBody3D" parent="Hand2/Points"]
 mass = 10.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand/Points/Point6"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand2/Points/Point6"]
 shape = ExtResource("4_07s28")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point6"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point6"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("5_hxljk")
 skeleton = NodePath("../..")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point6/Mesh"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point6/Mesh"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
-[node name="Point7" type="RigidBody3D" parent="Hand/Points"]
+[node name="Point7" type="RigidBody3D" parent="Hand2/Points"]
 mass = 10.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand/Points/Point7"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand2/Points/Point7"]
 shape = ExtResource("4_07s28")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point7"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point7"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("5_hxljk")
 skeleton = NodePath("../..")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point7/Mesh"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point7/Mesh"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
-[node name="Point8" type="RigidBody3D" parent="Hand/Points"]
+[node name="Point8" type="RigidBody3D" parent="Hand2/Points"]
 mass = 10.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand/Points/Point8"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand2/Points/Point8"]
 shape = ExtResource("4_07s28")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point8"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point8"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("5_hxljk")
 skeleton = NodePath("../..")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point8/Mesh"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point8/Mesh"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
-[node name="Point9" type="RigidBody3D" parent="Hand/Points"]
+[node name="Point9" type="RigidBody3D" parent="Hand2/Points"]
 mass = 10.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand/Points/Point9"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand2/Points/Point9"]
 shape = ExtResource("4_07s28")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point9"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point9"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("5_hxljk")
 skeleton = NodePath("../..")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point9/Mesh"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point9/Mesh"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
-[node name="Point10" type="RigidBody3D" parent="Hand/Points"]
+[node name="Point10" type="RigidBody3D" parent="Hand2/Points"]
 mass = 10.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand/Points/Point10"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand2/Points/Point10"]
 shape = ExtResource("4_07s28")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point10"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point10"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("5_hxljk")
 skeleton = NodePath("../..")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point10/Mesh"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point10/Mesh"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
-[node name="Point11" type="RigidBody3D" parent="Hand/Points"]
+[node name="Point11" type="RigidBody3D" parent="Hand2/Points"]
 mass = 10.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand/Points/Point11"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand2/Points/Point11"]
 shape = ExtResource("4_07s28")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point11"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point11"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("5_hxljk")
 skeleton = NodePath("../..")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point11/Mesh"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point11/Mesh"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
-[node name="Point12" type="RigidBody3D" parent="Hand/Points"]
+[node name="Point12" type="RigidBody3D" parent="Hand2/Points"]
 mass = 10.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand/Points/Point12"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand2/Points/Point12"]
 shape = ExtResource("4_07s28")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point12"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point12"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("5_hxljk")
 skeleton = NodePath("../..")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point12/Mesh"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point12/Mesh"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
-[node name="Point13" type="RigidBody3D" parent="Hand/Points"]
+[node name="Point13" type="RigidBody3D" parent="Hand2/Points"]
 mass = 10.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand/Points/Point13"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand2/Points/Point13"]
 shape = ExtResource("4_07s28")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point13"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point13"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("5_hxljk")
 skeleton = NodePath("../..")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point13/Mesh"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point13/Mesh"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
-[node name="Point14" type="RigidBody3D" parent="Hand/Points"]
+[node name="Point14" type="RigidBody3D" parent="Hand2/Points"]
 mass = 10.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand/Points/Point14"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand2/Points/Point14"]
 shape = ExtResource("4_07s28")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point14"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point14"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("5_hxljk")
 skeleton = NodePath("../..")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point14/Mesh"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point14/Mesh"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
-[node name="Point15" type="RigidBody3D" parent="Hand/Points"]
+[node name="Point15" type="RigidBody3D" parent="Hand2/Points"]
 mass = 10.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand/Points/Point15"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand2/Points/Point15"]
 shape = ExtResource("4_07s28")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point15"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point15"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("5_hxljk")
 skeleton = NodePath("../..")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point15/Mesh"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point15/Mesh"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
-[node name="Point16" type="RigidBody3D" parent="Hand/Points"]
+[node name="Point16" type="RigidBody3D" parent="Hand2/Points"]
 mass = 10.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand/Points/Point16"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand2/Points/Point16"]
 shape = ExtResource("4_07s28")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point16"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point16"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("5_hxljk")
 skeleton = NodePath("../..")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point16/Mesh"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point16/Mesh"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
-[node name="Point17" type="RigidBody3D" parent="Hand/Points"]
+[node name="Point17" type="RigidBody3D" parent="Hand2/Points"]
 mass = 10.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand/Points/Point17"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand2/Points/Point17"]
 shape = ExtResource("4_07s28")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point17"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point17"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("5_hxljk")
 skeleton = NodePath("../..")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point17/Mesh"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point17/Mesh"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
-[node name="Point18" type="RigidBody3D" parent="Hand/Points"]
+[node name="Point18" type="RigidBody3D" parent="Hand2/Points"]
 mass = 10.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand/Points/Point18"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand2/Points/Point18"]
 shape = ExtResource("4_07s28")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point18"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point18"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("5_hxljk")
 skeleton = NodePath("../..")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point18/Mesh"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point18/Mesh"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
-[node name="Point19" type="RigidBody3D" parent="Hand/Points"]
+[node name="Point19" type="RigidBody3D" parent="Hand2/Points"]
 mass = 10.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand/Points/Point19"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand2/Points/Point19"]
 shape = ExtResource("4_07s28")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point19"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point19"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("5_hxljk")
 skeleton = NodePath("../..")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point19/Mesh"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point19/Mesh"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
 
-[node name="Point20" type="RigidBody3D" parent="Hand/Points"]
+[node name="Point20" type="RigidBody3D" parent="Hand2/Points"]
 mass = 10.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand/Points/Point20"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand2/Points/Point20"]
 shape = ExtResource("4_07s28")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point20"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point20"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("5_hxljk")
 skeleton = NodePath("../..")
 
-[node name="Mesh" type="MeshInstance3D" parent="Hand/Points/Point20/Mesh"]
+[node name="Mesh" type="MeshInstance3D" parent="Hand2/Points/Point20/Mesh"]
 transform = Transform3D(1, 0, 0, 0, 0.306481, 0, 0, 0, 1, 0, 0.586431, 0)
 material_override = ExtResource("2_werer")
 mesh = ExtResource("6_cvuho")
 skeleton = NodePath("../..")
-
-[node name="untitled" parent="." instance=ExtResource("1_bk3vv")]
 
 [node name="RiggedHand" type="Node3D" parent="."]
 transform = Transform3D(-9.99999, 0, -8.74227e-07, 0, 10, 0, 8.74227e-07, 0, -9.99999, 0.160353, 1.5758, 2.17272)
+visible = false
 
 [node name="5b9ddf1fd1784ca89a9cbe027eb87d41_fbx" type="Node3D" parent="RiggedHand"]
 transform = Transform3D(1, 0, 0, 0, -3.57628e-07, -1, 0, 1, -3.57628e-07, 0, 0, 0)
@@ -743,6 +889,7 @@ transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
 transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
 
 [node name="Skeleton3D" type="Skeleton3D" parent="RiggedHand/Armature"]
+transform = Transform3D(1, -1.42109e-14, 0, 1.42109e-14, 1, 0, 0, 0, 1, 0.00163794, -0.149887, 0.127054)
 bones/0/name = "hands_r_hand_world"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
@@ -845,8 +992,8 @@ bones/14/name = "17"
 bones/14/parent = 1
 bones/14/rest = Transform3D(0.971141, 0.0737323, 0.226822, -0.229756, 0.544433, 0.806725, -0.0640077, -0.835558, 0.545662, 3.12749, -1.9069, -1.1509)
 bones/14/enabled = true
-bones/14/position = Vector3(3.12747, -1.90692, -1.15091)
-bones/14/rotation = Quaternion(-0.46932, 0.0831113, -0.0867288, 0.874819)
+bones/14/position = Vector3(3.12276, -1.90291, -1.19509)
+bones/14/rotation = Quaternion(-0.46932, 0.0831114, -0.0867288, 0.874819)
 bones/14/scale = Vector3(1, 1, 1)
 bones/15/name = "18"
 bones/15/parent = 14
@@ -927,3 +1074,7 @@ skin = SubResource("Skin_om5k6")
 libraries = {
 "": SubResource("AnimationLibrary_xigt2")
 }
+
+[node name="OpenXRHand" type="OpenXRHand" parent="."]
+hand = 1
+hand_skeleton = NodePath("../RiggedHand/Armature/Skeleton3D")

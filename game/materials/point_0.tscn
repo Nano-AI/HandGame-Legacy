@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cebq72uaowu82"]
+
+[ext_resource type="Shape3D" uid="uid://dprtbu7adajvl" path="res://materials/HandBallPhysics.tres" id="1_4y0px"]
+[ext_resource type="Material" uid="uid://cp3ibrx7bbnws" path="res://materials/red.tres" id="2_ymt6y"]
+[ext_resource type="SphereMesh" uid="uid://dlc2pjar02c5x" path="res://materials/HandBall.tres" id="3_ygbvw"]
+
+[node name="Point0" type="RigidBody3D"]
+mass = 2.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = ExtResource("1_4y0px")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+material_override = ExtResource("2_ymt6y")
+mesh = ExtResource("3_ygbvw")
+skeleton = NodePath("../..")
