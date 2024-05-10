@@ -27,5 +27,5 @@ while True:
         sock.sendto(str.encode(str(data)), serverAddressPort)
         # print(data)
 
-    # cv2.imshow("Image", img)
-    # cv2.waitKey(1)
+    cv2.imshow("Image", img)
+    cv2.waitKey(1)

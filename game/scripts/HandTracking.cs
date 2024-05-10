@@ -51,7 +51,7 @@ public partial class HandTracking : Node {
 		calibrateButton.Text = "Calibrate";
 		calibrateButton.Pressed += Calibrate;
 
-		skel = GetNode<Skeleton3D>("../RiggedHand/Armature/Skeleton3D");
+		skel = GetNode<Skeleton3D>("../Skeleton3D");
 		//		skel.FindBone("")
 
 		AddChild(calibrateButton);
@@ -82,14 +82,33 @@ public partial class HandTracking : Node {
 				handPositions[i] = new Vector3(-1 * x, y, z);
 			}
 
-			point.Position = handPositions[i] - offset - zOffset;
+			point.Position = handPositions[i] - offset;
 			
 			UpdateHand();
 		}
 	}
 
 	public void UpdateHand() {
+		for (int i = 5; i < 8;  i++) {
+			int id = skel.FindBone(i.ToString());
+			Vector3 at = handPositions[i].Normalized();
+			Vector3 next = handPositions[i + 1].Normalized();
+			Vector3 sum = (at + next).Normalized();
+			float angle = sum.Dot(next);
+			Vector3 axis = sum.Cross(next).Normalized();
 
+			if (!sum.IsNormalized() || !axis.IsNormalized()) {
+				return;
+			}
+
+			Quaternion q;
+			q = new Quaternion(axis, angle);
+//			Vector3 a = at.Cross(next);
+//			q.X = a.X; q.Y = a.Y; q.Z = a.Z;
+//			q.W = (float)(Mathf.Sqrt(Mathf.Pow(at.Length(), 2) * Math.Pow(next.Length(), 2)) + at.Dot(next));
+			skel.SetBonePoseRotation(id, q.Normalized());
+			GD.Print(q.Normalized().GetEuler());
+		}
 	}
 
 	public void Calibrate() {
