@@ -197,6 +197,10 @@ transform = Transform3D(-4, 0, -6.03983e-07, 0, 4, 0, 6.03983e-07, 0, -4, -5.079
 mesh = ExtResource("3_vd2vd")
 skeleton = NodePath("../..")
 
+[node name="Label3D" type="Label3D" parent="Fridge"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.25, 0.75, -0.25)
+text = "Fridge"
+
 [node name="Stove" type="Node3D" parent="."]
 transform = Transform3D(-4, 0, -3.49691e-07, 0, 4, 0, 3.49691e-07, 0, -4, -3, 0, -4)
 
@@ -260,9 +264,6 @@ skeleton = NodePath("../..")
 
 [node name="HoveringText" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.623568, 0)
-
-[node name="Label3D" type="Label3D" parent="HoveringText"]
-text = "0"
 
 [node name="Skeleton3D" type="Skeleton3D" parent="."]
 transform = Transform3D(0.25, 0, 0, 0, -0.0400435, 0.246772, 0, -0.246772, -0.0400435, 7.15823, 0.353016, 21.9149)
@@ -445,3 +446,6 @@ bones/24/scale = Vector3(1, 1, 1)
 [node name="hands_Rhand" type="MeshInstance3D" parent="Skeleton3D"]
 mesh = SubResource("ArrayMesh_gtjm8")
 skin = SubResource("Skin_j17qk")
+
+[node name="HandLabel" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

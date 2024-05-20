@@ -29,6 +29,12 @@ public partial class HandTracking : Node {
 	[Export]
 	public int zoomScale = 20;
 
+	[Export]
+	public string[] interactables = { "Fridge" };
+
+	[Export]
+	public double interactableDistance = 0.1d;
+
 	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready() {
@@ -84,7 +90,13 @@ public partial class HandTracking : Node {
 
 			point.Position = handPositions[i] - offset;
 			
-			UpdateHand();
+			// UpdateHand();
+		}
+
+		foreach (string name in interactables) {
+			if (GetTree().Root.GetNode<Node3D>("/" + name).Position.DistanceTo(handPoints[8].Position) < interactableDistance) {
+				GD.Print("close to " + name);
+			}
 		}
 	}
 
@@ -101,13 +113,13 @@ public partial class HandTracking : Node {
 				return;
 			}
 
-			Quaternion q;
-			q = new Quaternion(axis, angle);
+//			Quaternion q;
+//			q = new Quaternion(axis, angle);
 //			Vector3 a = at.Cross(next);
 //			q.X = a.X; q.Y = a.Y; q.Z = a.Z;
 //			q.W = (float)(Mathf.Sqrt(Mathf.Pow(at.Length(), 2) * Math.Pow(next.Length(), 2)) + at.Dot(next));
-			skel.SetBonePoseRotation(id, q.Normalized());
-			GD.Print(q.Normalized().GetEuler());
+			// skel.SetBonePoseRotation(id, q.Normalized());
+			// GD.Print(q.Normalized().GetEuler());
 		}
 	}
 
